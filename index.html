@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: white;
+    }
+    #road{
+        border-bottom: 7px dashed black;
+    }
+    #runner{
+        background:url("imp.png");
+        width: 56px;
+        height:113px ;
+        animation:walk 1s steps(8) infinite,
+                   forward 10s linear infinite;
+        
+    }
+    @keyframes walk{
+         0%{
+             background-position: 0px;
+         }
+         100%{
+             background-position: 447px;
+         }
+    }
+    @keyframes forward{
+        0%{
+             transform: translateX(-100px);
+         }
+         100%{
+            transform: translateX(1500px);
+         }
+    }
+    </style>
+</head>
+<body>
+    <div id="runner"></div>
+    <div id="road"></div>
+   
+</body>
+</html>
